@@ -1,0 +1,32 @@
+@import "src/assets/colors";
+@import "src/assets/mixins";
+.container {
+  margin-bottom: 20px;
+}
+.title {
+  @include title();
+}
+.input {
+  width: 544px;
+  height: 56px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 2px solid $medium;
+  }
+}
+.disabled {
+  background: $light;
+  border-radius: 2px;
+  cursor: not-allowed;
+}
+
+.valid {
+  border: 2px solid $error;
+  border-radius: 2px;
+}
+.validText {
+  color: $error;
+}
